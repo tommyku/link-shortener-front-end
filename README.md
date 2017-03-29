@@ -11,7 +11,7 @@ This is the backend (nevermind the repo name) for the link shortener. You need a
 1. Make sure you have Ruby 2.3.1+ installed and a Firebase database set up
 2. Run `bundle install` from project root folder
 2. Set the environmental variables `FIREBASE_BASE_URI` and `FIREBASE_SECRET_KEY` in your environment
-3. To push some data into the Firebase database, use `irb`:
+3. To push some data into the Firebase database, use `bundle exec irb`:
 
 ``` ruby
 irb> require 'firebase'
