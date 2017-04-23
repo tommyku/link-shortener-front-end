@@ -3,7 +3,7 @@ require 'sinatra'
 
 class App < Sinatra::Base
   get '/' do
-    "the time where this server lives is #{Time.now}"
+    redirect 'https://github.com/tommyku/link-shortener-front-end'
   end
 
   get '/:short_key' do |short_key|
