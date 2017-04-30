@@ -15,7 +15,7 @@ class App < Sinatra::Base
       target = response.body.first[1]
       redirect target
     else
-      "I've got nothing for you"
+      "I've got nothing for you, try maybe another castle"
     end
   end
 end
