@@ -36,31 +36,25 @@ To run locally:
 
 ``` bash
 $ bundle install
-$ bundle exec ruby -S rackup -w config.ru
+$ bundle exec ruby app.rb
 ```
 
 ## Deployment
 
-This repo is designed to be deployed on [OpenShift](https://www.openshift.com) (the old gen).
-
-### Setting environmental variables on OpenShift
+### Building Docker image
 
 SSH into your OpenShift instance, then:
 
 ``` bash
-$ cd ~/.env/user_vars
-$ echo '...' > FIREBASE_BASE_URI
-$ echo '...' > FIREBASE_SECRET_KEY
+$ docker build -t link-shortener-front-end .
 ```
 
-### Git push and deploy
-
-Make sure you do this after setting environmental variables because restarting/reloading an instance does not reload the envs, stopping and starting an instance do.
+### Run the image
 
 From the project folder,
 
 ``` bash
-$ git push master
+$ docker run -e FIREBASE_BASE_URI=FIREBASE_BASE_URI -e FIREBASE_SECRET_KEY=FIREBASE_SECRET_KEY -e PORT=3000 -p 3000:3000 link-shortener-front-end
 ```
 
 ## Built With

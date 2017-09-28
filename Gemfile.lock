@@ -20,8 +20,7 @@ PLATFORMS
 
 DEPENDENCIES
   firebase
-  rack (= 1.5.2)
   sinatra
 
 BUNDLED WITH
-   1.14.5
+   1.15.2
