@@ -72,3 +72,7 @@ $ docker run -e FIREBASE_BASE_URI=FIREBASE_BASE_URI -e FIREBASE_SECRET_KEY=FIREB
 
 * [Sinatra](http://www.sinatrarb.com/) - Web server
 * [oscardelben/firebase-ruby](https://github.com/oscardelben/firebase-ruby) - ruby Firebase API wrapper
+
+## License
+
+This project is an open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
