@@ -43,10 +43,21 @@ $ bundle exec ruby app.rb
 
 ### Building Docker image
 
-SSH into your OpenShift instance, then:
+SSH into your production environment and build the image there:
 
 ``` bash
 $ docker build -t link-shortener-front-end .
+```
+
+Alternatively, you can build it locally and `sftp`/`scp` it onto the
+production server:
+
+``` bash
+(local)$ docker build -t link-shortener-front-end .
+(local)$ docker save -o link-shortener-front-end link-shortener-front-end
+(local)$ scp link-shortener-front-end username@production-server:~/link-shortener-front-end
+
+(prod)$ docker load -i link-shortener-front-end
 ```
 
 ### Run the image
@@ -61,4 +72,3 @@ $ docker run -e FIREBASE_BASE_URI=FIREBASE_BASE_URI -e FIREBASE_SECRET_KEY=FIREB
 
 * [Sinatra](http://www.sinatrarb.com/) - Web server
 * [oscardelben/firebase-ruby](https://github.com/oscardelben/firebase-ruby) - ruby Firebase API wrapper
-* [openshift-quickstart/sinatra-example](https://github.com/openshift-quickstart/sinatra-example) - Basis for OpenShift gear
