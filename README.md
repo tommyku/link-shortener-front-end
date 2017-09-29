@@ -21,7 +21,7 @@ irb> response = firebase.get('appleorange')
 irb> response.body
 {'-somefirebasekey': 'https://github.com/tommyku/link-shortener-front-end'}
 ```
-4. To run the server locally, run `bundle exec ruby -S rackup -w config.ru` and navigate to [http://localhost:9292/appleorange](http://localhost:9292/appleorange), you should have been redirected to [https://github.com/tommyku/link-shortener-front-end](https://github.com/tommyku/link-shortener-front-end)
+4. To run the server locally, run `bundle exec ruby app.rb` and navigate to [http://localhost:3000/appleorange](http://localhost:3000/appleorange), you should have been redirected to [https://github.com/tommyku/link-shortener-front-end](https://github.com/tommyku/link-shortener-front-end)
 
 ### Prerequisites
 
